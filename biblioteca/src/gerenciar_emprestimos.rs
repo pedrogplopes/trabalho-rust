@@ -55,7 +55,7 @@ pub fn gerenciar_emprestimos(emprestimo_controller: &mut EmprestimoController) {
             }
             "2" => emprestimo_controller.listar_emprestimos(),
             "3" => {
-                // Alterar empréstimo (ID do livro, nome do autor e data)
+
                 let mut id = String::new();
                 println!("Digite o ID do empréstimo para alterar:");
                 io::stdin().read_line(&mut id).expect("Erro ao ler o ID");
@@ -124,7 +124,6 @@ pub fn gerenciar_emprestimos(emprestimo_controller: &mut EmprestimoController) {
     }
 }
 
-/// Função para inserir a data de empréstimo
 fn inserir_data_emprestimo() -> NaiveDate {
     println!("Digite a data do empréstimo (formato: YYYY-MM-DD):");
     let mut data = String::new();

@@ -12,6 +12,14 @@ impl LivroController {
     }
 
     pub fn criar_livro(&mut self, livro: Livro) -> Result<(), String> {
+        if livro.titulo.trim().is_empty() {
+            return Err("O título não pode ser vazio".to_string());
+        }
+    
+        if livro.autor.trim().is_empty() {
+            return Err("O autor não pode ser vazio".to_string());
+        }
+        
         self.livros.push(livro);
         salvar_livros(&self.livros).map_err(|e| e.to_string())
     }
@@ -36,12 +44,12 @@ impl LivroController {
         }
     }
 
-    /// Retorna uma referência ao livro com o ID fornecido
+    
     pub fn obter_livro(&self, id: u32) -> Option<&Livro> {
         self.livros.iter().find(|&livro| livro.id == id)
     }
 
-    /// Atualiza um livro existente pelo ID
+    
     pub fn atualizar_livro(&mut self, id: u32, livro_atualizado: Livro) -> Result<(), String> {
         if let Some(pos) = self.livros.iter().position(|l| l.id == id) {
             self.livros[pos] = livro_atualizado;

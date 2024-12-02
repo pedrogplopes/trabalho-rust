@@ -1,4 +1,4 @@
-use chrono::{NaiveDate, Utc};
+use chrono::NaiveDate;
 use serde::{Deserialize, Serialize};
 
 // Enum para o gênero do livro
@@ -22,7 +22,7 @@ pub struct Livro {
     pub genero: Genero,
 }
 
-// Função para validar um livro
+/*
 pub fn validar_livro(livro: &Livro) -> Result<(), String> {
     if livro.titulo.trim().is_empty() {
         return Err("O título do livro não pode estar vazio.".to_string());
@@ -34,4 +34,4 @@ pub fn validar_livro(livro: &Livro) -> Result<(), String> {
         return Err("A data de publicação deve ser válida.".to_string());
     }
     Ok(())
-}
+} */

@@ -1,4 +1,4 @@
-use std::io::{self, Write};  // Adicionei o 'self' e 'Write' ao importar o módulo io
+use std::io::{self, Write};
 use std::fs::File;
 use crate::emprestimo::{Emprestimo, StatusEmprestimo};
 use crate::emprestimo_persistencia::{carregar_emprestimos, salvar_emprestimos};
@@ -37,10 +37,16 @@ impl EmprestimoController {
             }
         }
     }
+    
+    #[allow(dead_code)] 
+    pub fn obter_emprestimos(&self) -> &Vec<Emprestimo> {
+        &self.emprestimos
+    }
 
     pub fn obter_qtd_emprestimos(&self) -> usize {
             self.emprestimos.len()
         }
+        
 
     pub fn alterar_status_emprestimo(&mut self, id: u32) -> Result<(), String> {
         if let Some(emprestimo) = self.emprestimos.iter_mut().find(|e| e.id == id) {
@@ -49,7 +55,10 @@ impl EmprestimoController {
             } else {
                 StatusEmprestimo::Ativo
             };
-            self.salvar_emprestimos(); // Salva no JSON
+            match self.salvar_emprestimos() {
+                Ok(_) => println!("Empréstimos salvos com sucesso."),
+                Err(e) => eprintln!("Erro ao salvar os empréstimos: {}", e),
+            }
             Ok(())
         } else {
             Err(format!("Empréstimo com ID {} não encontrado.", id))
@@ -57,14 +66,11 @@ impl EmprestimoController {
     }
 
     pub fn salvar_emprestimos(&self) -> Result<(), io::Error> {
-        // Serializa a lista de empréstimos para JSON
         let json_data = serde_json::to_string(&self.emprestimos)
             .map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?;
 
-        // Abre ou cria o arquivo para escrita
         let mut file = File::create("emprestimos.json")?;
 
-        // Escreve os dados no arquivo
         file.write_all(json_data.as_bytes())?;
 
         Ok(())

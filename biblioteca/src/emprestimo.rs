@@ -1,8 +1,6 @@
-use chrono::{NaiveDate, Utc};
+use chrono::NaiveDate;
 use serde::{Deserialize, Serialize};
-use crate::livro::Livro;
 
-// Enum para o status do empréstimo
 #[derive(Debug, Serialize, Deserialize)]
 pub enum StatusEmprestimo {
     Ativo,
@@ -14,12 +12,10 @@ impl PartialEq<&str> for StatusEmprestimo {
         match self {
             StatusEmprestimo::Ativo => *other == "ativo",
             StatusEmprestimo::Finalizado => *other == "finalizado",
-            // adicione mais comparações se houver mais variantes
         }
     }
 }
 
-// Estrutura para representar um empréstimo
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Emprestimo {
     pub id: u32,
@@ -29,7 +25,7 @@ pub struct Emprestimo {
     pub status: StatusEmprestimo,
 }
 
-// Função para validar um empréstimo
+/*
 pub fn validar_emprestimo(emprestimo: &Emprestimo) -> Result<(), String> {
     if emprestimo.id == 0 {
         return Err("O ID do empréstimo deve ser um número positivo.".to_string());
@@ -41,4 +37,4 @@ pub fn validar_emprestimo(emprestimo: &Emprestimo) -> Result<(), String> {
         return Err("A data de empréstimo precisa ser válida.".to_string());
     }
     Ok(())
-}
+} */

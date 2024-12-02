@@ -82,7 +82,7 @@ pub fn gerenciar_livros(livro_controller: &mut LivroController) {
 
                     let data_publicacao_atualizada = inserir_data_publicacao();
 
-                    // Criação do novo livro com os campos atualizados
+                    
                     let livro_atualizado = Livro {
                         id: livro.id,
                         titulo: titulo_atualizado,
@@ -117,7 +117,7 @@ pub fn gerenciar_livros(livro_controller: &mut LivroController) {
     }
 }
 
-/// Função para selecionar o gênero de um livro
+
 fn selecionar_genero() -> Genero {
     println!("Selecione o gênero do livro:");
     println!("1. Nenhum");
@@ -142,7 +142,7 @@ fn selecionar_genero() -> Genero {
     }
 }
 
-/// Função para inserir a data de publicação
+
 fn inserir_data_publicacao() -> NaiveDate {
     println!("Digite a data de publicação (formato: YYYY-MM-DD):");
     let mut data = String::new();
