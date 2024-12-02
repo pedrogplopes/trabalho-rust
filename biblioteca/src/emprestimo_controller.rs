@@ -29,8 +29,12 @@ impl EmprestimoController {
     }
 
     pub fn listar_emprestimos(&self) {
-        for emprestimo in &self.emprestimos {
-            println!("{:?}", emprestimo);
+        if self.emprestimos.is_empty() {
+            println!("Nenhum empréstimo registrado.");
+        } else {
+            for emprestimo in &self.emprestimos {
+                println!("{:?}", emprestimo);
+            }
         }
     }
 
@@ -64,5 +68,9 @@ impl EmprestimoController {
         file.write_all(json_data.as_bytes())?;
 
         Ok(())
+    }
+
+    pub fn obter_emprestimo_mut(&mut self, id: u32) -> Option<&mut Emprestimo> {
+        self.emprestimos.iter_mut().find(|e| e.id == id)
     }
 }

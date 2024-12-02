@@ -2,7 +2,7 @@ use chrono::{NaiveDate, Utc};
 use serde::{Deserialize, Serialize};
 
 // Enum para o gênero do livro
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone, PartialEq)]
 pub enum Genero {
     None, // Valor padrão
     Ficcao,
