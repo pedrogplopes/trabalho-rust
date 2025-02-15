@@ -1,0 +1,10 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/debug/deps/libxcm_procedural-1b709f45c734a391.so: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/builder_pattern.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/v2.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/v3.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/v4.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/weight_info.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/debug/deps/xcm_procedural-1b709f45c734a391.d: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/builder_pattern.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/v2.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/v3.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/v4.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/weight_info.rs
+
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/lib.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/builder_pattern.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/v2.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/v3.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/v4.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/xcm-procedural-8.0.0/src/weight_info.rs:

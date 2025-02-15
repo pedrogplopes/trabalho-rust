@@ -1,0 +1,10 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/debug/deps/libscale_bits-bb4604a9261954f7.rmeta: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/bits/mod.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/bits/bits.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/scale/mod.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/scale/decode_iter.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/scale/encode_iter.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/debug/deps/scale_bits-bb4604a9261954f7.d: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/bits/mod.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/bits/bits.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/scale/mod.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/scale/decode_iter.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/scale/encode_iter.rs
+
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/lib.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/bits/mod.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/bits/bits.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/scale/mod.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/scale/decode_iter.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scale-bits-0.5.0/src/scale/encode_iter.rs:
