@@ -1,0 +1,12 @@
+/home/victor/trabalho-rust/biblioteca/target/debug/deps/liblinkme_impl-6a558ed8463d3300.so: /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/lib.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/args.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/attr.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/declaration.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/element.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/hash.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/linker.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/ty.rs
+
+/home/victor/trabalho-rust/biblioteca/target/debug/deps/linkme_impl-6a558ed8463d3300.d: /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/lib.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/args.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/attr.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/declaration.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/element.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/hash.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/linker.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/ty.rs
+
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/lib.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/args.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/attr.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/declaration.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/element.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/hash.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/linker.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/linkme-impl-0.3.31/src/ty.rs:

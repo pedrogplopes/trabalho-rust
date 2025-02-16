@@ -1,0 +1,10 @@
+/home/victor/trabalho-rust/biblioteca/target/debug/deps/libxcm_procedural-95d9beb1576219b9.so: /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/lib.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/builder_pattern.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/v2.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/v3.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/v4.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/weight_info.rs
+
+/home/victor/trabalho-rust/biblioteca/target/debug/deps/xcm_procedural-95d9beb1576219b9.d: /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/lib.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/builder_pattern.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/v2.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/v3.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/v4.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/weight_info.rs
+
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/lib.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/builder_pattern.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/v2.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/v3.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/v4.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/xcm-procedural-8.0.0/src/weight_info.rs:

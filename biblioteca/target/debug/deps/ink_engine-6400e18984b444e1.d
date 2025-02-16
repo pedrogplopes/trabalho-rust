@@ -1,0 +1,12 @@
+/home/victor/trabalho-rust/biblioteca/target/debug/deps/libink_engine-6400e18984b444e1.rmeta: /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/lib.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/ext.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/test_api.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/chain_extension.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/database.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/exec_context.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/hashing.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/types.rs
+
+/home/victor/trabalho-rust/biblioteca/target/debug/deps/ink_engine-6400e18984b444e1.d: /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/lib.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/ext.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/test_api.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/chain_extension.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/database.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/exec_context.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/hashing.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/types.rs
+
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/lib.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/ext.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/test_api.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/chain_extension.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/database.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/exec_context.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/hashing.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ink_engine-5.1.1/src/types.rs:

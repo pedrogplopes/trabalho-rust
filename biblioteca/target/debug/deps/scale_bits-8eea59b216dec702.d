@@ -1,0 +1,10 @@
+/home/victor/trabalho-rust/biblioteca/target/debug/deps/libscale_bits-8eea59b216dec702.rmeta: /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/lib.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/bits/mod.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/bits/bits.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/scale/mod.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/scale/decode_iter.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/scale/encode_iter.rs
+
+/home/victor/trabalho-rust/biblioteca/target/debug/deps/scale_bits-8eea59b216dec702.d: /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/lib.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/bits/mod.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/bits/bits.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/scale/mod.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/scale/decode_iter.rs /home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/scale/encode_iter.rs
+
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/lib.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/bits/mod.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/bits/bits.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/scale/mod.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/scale/decode_iter.rs:
+/home/victor/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/scale-bits-0.5.0/src/scale/encode_iter.rs:

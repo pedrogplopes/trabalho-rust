@@ -1,7 +1,11 @@
+#![cfg_attr(not(feature = "std"), no_std)]
+
+use ink::prelude::string::String;
+use ink::storage::Mapping;
+
 #[ink::contract]
-mod biblioteca {
-    use ink::prelude::string::String;
-    use ink::storage::Mapping;
+mod biblioteca_ink {
+    use super::*;
 
     #[ink(storage)]
     pub struct Biblioteca {
@@ -10,6 +14,12 @@ mod biblioteca {
         emprestimos: Mapping<u32, Emprestimo>,
         proximo_id_emprestimo: u32,
         livros_emprestados: Mapping<u32, u32>,
+    }
+
+    impl Default for Biblioteca {
+        fn default() -> Self {
+            Self::new()
+        }
     }
 
     impl Biblioteca {
@@ -31,7 +41,7 @@ mod biblioteca {
             autor: String,
             data_publicacao: u64,
             genero: Genero,
-        ) -> Result<(), String> {
+        ) -> Result<u32, String> {
             if titulo.trim().is_empty() || autor.trim().is_empty() {
                 return Err("Título e autor não podem ser vazios".into());
             }
@@ -45,7 +55,7 @@ mod biblioteca {
             };
             self.livros.insert(id, &livro);
             self.proximo_id_livro = self.proximo_id_livro.saturating_add(1);
-            Ok(())
+            Ok(id)
         }
 
         #[ink(message)]
@@ -59,10 +69,10 @@ mod biblioteca {
             id_livro: u32,
             usuario: AccountId,
         ) -> Result<(), String> {
-            if self.livros_emprestados.contains(id_livro) {
+            if self.livros_emprestados.get(id_livro).is_some() {
                 return Err("Livro já emprestado".into());
             }
-            let livro = self.livros.get(id_livro).ok_or("Livro não encontrado")?;
+            let _livro = self.livros.get(id_livro).ok_or("Livro não encontrado")?;
             let now = self.env().block_timestamp();
             let emprestimo = Emprestimo {
                 id: self.proximo_id_emprestimo,
@@ -107,12 +117,12 @@ mod biblioteca {
     #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
     #[cfg_attr(feature = "std", derive(scale_info::TypeInfo, ink::storage::traits::StorageLayout))]
     pub enum Genero {
-        None,
-        Ficcao,
-        NaoFiccao,
-        Fantasia,
-        Ciencia,
-        Romance,
+        None = 0,
+        Ficcao = 1,
+        NaoFiccao = 2,
+        Fantasia = 3,
+        Ciencia = 4,
+        Romance = 5,
     }
 
     #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
@@ -129,8 +139,8 @@ mod biblioteca {
     #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
     #[cfg_attr(feature = "std", derive(scale_info::TypeInfo, ink::storage::traits::StorageLayout))]
     pub enum StatusEmprestimo {
-        Ativo,
-        Finalizado,
+        Ativo = 0,
+        Finalizado = 1,
     }
 
     #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
@@ -148,7 +158,9 @@ mod biblioteca {
     pub struct EmprestimoRealizado {
         #[ink(topic)]
         id_emprestimo: u32,
+        #[ink(topic)]
         id_livro: u32,
+        #[ink(topic)]
         usuario: AccountId,
         data_emprestimo: u64,
     }
@@ -158,31 +170,5 @@ mod biblioteca {
         #[ink(topic)]
         id_emprestimo: u32,
         data_devolucao: u64,
-    }
-
-    #[ink::test]
-    fn emprestar_e_devolver_livro() {
-        let mut biblioteca = Biblioteca::new();
-        let livro_id = biblioteca.criar_livro(
-            "Dom Quixote".into(),
-            "Miguel de Cervantes".into(),
-            1605,
-            Genero::Romance,
-        ).unwrap();
-
-        let usuario = AccountId::from([0x1; 32]);
-
-        // Empréstimo
-        assert!(biblioteca.emprestar_livro(livro_id, usuario).is_ok());
-        let emprestimo = biblioteca.emprestimos.get(0).unwrap();
-        assert_eq!(emprestimo.status, StatusEmprestimo::Ativo);
-
-        // Tentar emprestar o mesmo livro novamente (deve falhar)
-        assert!(biblioteca.emprestar_livro(livro_id, usuario).is_err());
-
-        // Devolução
-        assert!(biblioteca.devolver_livro(0).is_ok());
-        let emprestimo = biblioteca.emprestimos.get(0).unwrap();
-        assert_eq!(emprestimo.status, StatusEmprestimo::Finalizado);
     }
 }

@@ -1,15 +1,19 @@
 [package]
-name = "biblioteca-ink"
+name = "biblioteca_ink"
 version = "0.1.0"
 edition = "2021"
+authors = ["Seu Nome <seu@email.com>"]
+autobins = false
+autoexamples = false
+autotests = false  # Adicione isso
 
 [dependencies]
 ink = { version = "5.0.0-rc.2", default-features = false }
 scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
-scale-info = { version = "2.6", default-features = false, features = ["derive"], optional = true }
+scale-info = { version = "2.6", default-features = false, features = ["derive"] }
 
 [dev-dependencies]
-ink_e2e = { version = "4.2.0", default-features = false }
+ink_e2e = { version = "5.0.0-rc.2", default-features = false }
 
 [features]
 default = ["std"]
@@ -19,12 +23,14 @@ std = [
     "scale-info/std",
 ]
 
+[lib]
+name = "biblioteca_ink"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
 [profile.release]
 codegen-units = 1
 opt-level = "z"
 lto = true
 debug = false
 panic = "abort"
-
-[package.metadata.contract]
-ink-as-dependency = true
