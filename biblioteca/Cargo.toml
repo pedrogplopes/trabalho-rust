@@ -24,7 +24,6 @@ std = [
 ]
 
 [lib]
-name = "biblioteca_ink"
 path = "src/lib.rs"
 crate-type = ["cdylib"]
 

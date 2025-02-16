@@ -1,0 +1,9 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/debug/deps/libink_storage_traits-979d73b6c3feb03a.rmeta: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/impls/mod.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/storage.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/layout/mod.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/layout/impls.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/debug/deps/ink_storage_traits-979d73b6c3feb03a.d: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/impls/mod.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/storage.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/layout/mod.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/layout/impls.rs
+
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/lib.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/impls/mod.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/storage.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/layout/mod.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage_traits-5.1.1/src/layout/impls.rs:
