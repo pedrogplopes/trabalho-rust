@@ -103,21 +103,6 @@ pub fn adicionar_livro(
             Ok(())
         }
 
-        #[ink(message)]
-        pub fn buscar_livro_por_titulo(&self, titulo: String) -> Vec<Livro> {
-            (0..self.next_livro_id)
-                .filter_map(|id| self.livros.get(id))
-                .filter(|livro| livro.titulo.contains(&titulo))
-                .collect()
-        }
-
-        #[ink(message)]
-        pub fn buscar_livro_por_autor(&self, autor: String) -> Vec<Livro> {
-            (0..self.next_livro_id)
-                .filter_map(|id| self.livros.get(id))
-                .filter(|livro| livro.autor == autor)
-                .collect()
-        }
 
         #[ink(message)]
         pub fn editar_emprestimo(&mut self, emprestimo_id: u32, novo_usuario: String, nova_data_emprestimo: String) -> Result<(), String> {
