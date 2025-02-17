@@ -1,0 +1,10 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/ink/wasm32-unknown-unknown/release/deps/liblog-08c112ef7e932559.rmeta: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/macros.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/serde.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/__private_api.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/ink/wasm32-unknown-unknown/release/deps/liblog-08c112ef7e932559.rlib: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/macros.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/serde.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/__private_api.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/ink/wasm32-unknown-unknown/release/deps/log-08c112ef7e932559.d: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/macros.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/serde.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/__private_api.rs
+
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/lib.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/macros.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/serde.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.25/src/__private_api.rs:

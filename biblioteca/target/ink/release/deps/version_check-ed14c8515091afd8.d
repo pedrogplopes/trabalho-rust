@@ -1,0 +1,10 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/ink/release/deps/libversion_check-ed14c8515091afd8.rmeta: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/version.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/channel.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/date.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/ink/release/deps/libversion_check-ed14c8515091afd8.rlib: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/version.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/channel.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/date.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/trabalho-rust-ink/trabalho-rust/biblioteca/target/ink/release/deps/version_check-ed14c8515091afd8.d: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/version.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/channel.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/date.rs
+
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/lib.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/version.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/channel.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/date.rs:
