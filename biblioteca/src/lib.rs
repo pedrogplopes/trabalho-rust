@@ -1,174 +1,155 @@
-#![cfg_attr(not(feature = "std"), no_std)]
-
-use ink::prelude::string::String;
-use ink::storage::Mapping;
+#![cfg_attr(not(feature = "std"), no_std, no_main)]
 
 #[ink::contract]
-mod biblioteca_ink {
-    use super::*;
+mod sistema_emprestimo {
+    use ink::prelude::{string::String, vec::Vec};
+    use ink::storage::Mapping;
+
+    #[derive(scale::Encode, scale::Decode, Clone, Debug, PartialEq)]
+    #[cfg_attr(
+        feature = "std",
+        derive(scale_info::TypeInfo, ink::storage::traits::StorageLayout)
+    )]
+    pub struct Livro {
+        pub id: u32,
+        pub titulo: String,
+        pub autor: String,
+        pub disponivel: bool,
+    }
+
+    #[derive(scale::Encode, scale::Decode, Clone, Debug, PartialEq)]
+    #[cfg_attr(
+        feature = "std",
+        derive(scale_info::TypeInfo, ink::storage::traits::StorageLayout)
+    )]
+    pub struct Emprestimo {
+        pub livro_id: u32,
+        pub usuario: String,
+        pub data_emprestimo: String,
+        pub data_devolucao: Option<String>,
+    }
 
     #[ink(storage)]
-    pub struct Biblioteca {
+    #[derive(Default)]
+    pub struct EmprestimoManager {
         livros: Mapping<u32, Livro>,
-        proximo_id_livro: u32,
         emprestimos: Mapping<u32, Emprestimo>,
-        proximo_id_emprestimo: u32,
-        livros_emprestados: Mapping<u32, u32>,
+        next_livro_id: u32,
+        next_emprestimo_id: u32,
     }
 
-    impl Default for Biblioteca {
-        fn default() -> Self {
-            Self::new()
-        }
-    }
-
-    impl Biblioteca {
-        #[ink(constructor, selector = 0x0001)]
+    impl EmprestimoManager {
+        #[ink(constructor)]
         pub fn new() -> Self {
-            Self {
-                livros: Mapping::new(),
-                proximo_id_livro: 0,
-                emprestimos: Mapping::new(),
-                proximo_id_emprestimo: 0,
-                livros_emprestados: Mapping::new(),
-            }
+            Self::default()
         }
 
+        // ----- CRUD para Livros -----
         #[ink(message)]
-        pub fn criar_livro(
-            &mut self,
-            titulo: String,
-            autor: String,
-            data_publicacao: u64,
-            genero: Genero,
-        ) -> Result<u32, String> {
-            if titulo.trim().is_empty() || autor.trim().is_empty() {
-                return Err("Título e autor não podem ser vazios".into());
+        pub fn adicionar_livro(&mut self, titulo: String, autor: String) -> Result<u32, String> {
+            if titulo.is_empty() || autor.is_empty() {
+                return Err("Título e autor não podem estar vazios".into());
             }
-            let id = self.proximo_id_livro;
+
+            let id = self.next_livro_id;
             let livro = Livro {
                 id,
                 titulo,
                 autor,
-                data_publicacao,
-                genero,
+                disponivel: true,
             };
+
             self.livros.insert(id, &livro);
-            self.proximo_id_livro = self.proximo_id_livro.saturating_add(1);
+            self.next_livro_id = self.next_livro_id.checked_add(1).ok_or("ID overflow")?;
+
             Ok(id)
         }
 
         #[ink(message)]
-        pub fn obter_livro(&self, id: u32) -> Option<Livro> {
-            self.livros.get(id)
-        }
-
-        #[ink(message)]
-        pub fn emprestar_livro(
-            &mut self,
-            id_livro: u32,
-            usuario: AccountId,
-        ) -> Result<(), String> {
-            if self.livros_emprestados.get(id_livro).is_some() {
-                return Err("Livro já emprestado".into());
+        pub fn emprestar_livro(&mut self, livro_id: u32, usuario: String, data_emprestimo: String) -> Result<u32, String> {
+            let mut livro = self.livros.get(livro_id).ok_or("Livro não encontrado")?;
+            if !livro.disponivel {
+                return Err("Livro não está disponível".into());
             }
-            let _livro = self.livros.get(id_livro).ok_or("Livro não encontrado")?;
-            let now = self.env().block_timestamp();
+
+            let emprestimo_id = self.next_emprestimo_id;
             let emprestimo = Emprestimo {
-                id: self.proximo_id_emprestimo,
-                id_livro,
+                livro_id,
                 usuario,
-                data_emprestimo: now,
+                data_emprestimo,
                 data_devolucao: None,
-                status: StatusEmprestimo::Ativo,
             };
-            self.emprestimos.insert(self.proximo_id_emprestimo, &emprestimo);
-            self.livros_emprestados.insert(id_livro, &self.proximo_id_emprestimo);
-            self.proximo_id_emprestimo = self.proximo_id_emprestimo.saturating_add(1);
-            self.env().emit_event(EmprestimoRealizado {
-                id_emprestimo: emprestimo.id,
-                id_livro,
-                usuario,
-                data_emprestimo: now,
-            });
+
+            livro.disponivel = false;
+            self.livros.insert(livro_id, &livro);
+            self.emprestimos.insert(emprestimo_id, &emprestimo);
+            self.next_emprestimo_id = self.next_emprestimo_id.checked_add(1).ok_or("ID overflow")?;
+
+            Ok(emprestimo_id)
+        }
+
+        #[ink(message)]
+        pub fn devolver_livro(&mut self, emprestimo_id: u32, data_devolucao: String) -> Result<(), String> {
+            let mut emprestimo = self.emprestimos.get(emprestimo_id).ok_or("Empréstimo não encontrado")?;
+            let mut livro = self.livros.get(emprestimo.livro_id).ok_or("Livro não encontrado")?;
+
+            livro.disponivel = true;
+            emprestimo.data_devolucao = Some(data_devolucao);
+
+            self.livros.insert(emprestimo.livro_id, &livro);
+            self.emprestimos.insert(emprestimo_id, &emprestimo);
             Ok(())
         }
 
         #[ink(message)]
-        pub fn devolver_livro(&mut self, id_emprestimo: u32) -> Result<(), String> {
-            let mut emprestimo = self.emprestimos.get(id_emprestimo)
-                .ok_or("Empréstimo não encontrado")?;
-            if emprestimo.status == StatusEmprestimo::Finalizado {
-                return Err("Empréstimo já finalizado".into());
+        pub fn listar_livros(&self) -> Vec<Livro> {
+            let mut lista = Vec::new();
+            for id in 0..self.next_livro_id {
+                if let Some(livro) = self.livros.get(id) {
+                    lista.push(livro);
+                }
             }
-            emprestimo.status = StatusEmprestimo::Finalizado;
-            emprestimo.data_devolucao = Some(self.env().block_timestamp());
-            self.emprestimos.insert(id_emprestimo, &emprestimo);
-            self.livros_emprestados.remove(emprestimo.id_livro);
-            self.env().emit_event(EmprestimoFinalizado {
-                id_emprestimo,
-                data_devolucao: emprestimo.data_devolucao.unwrap(),
-            });
-            Ok(())
+            lista
+        }
+
+        #[ink(message)]
+        pub fn listar_emprestimos(&self) -> Vec<Emprestimo> {
+            let mut lista = Vec::new();
+            for id in 0..self.next_emprestimo_id {
+                if let Some(emprestimo) = self.emprestimos.get(id) {
+                    lista.push(emprestimo);
+                }
+            }
+            lista
         }
     }
 
-    #[repr(u8)]
-    #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
-    #[cfg_attr(feature = "std", derive(scale_info::TypeInfo, ink::storage::traits::StorageLayout))]
-    pub enum Genero {
-        None = 0,
-        Ficcao = 1,
-        NaoFiccao = 2,
-        Fantasia = 3,
-        Ciencia = 4,
-        Romance = 5,
-    }
+    #[cfg(test)]
+    mod tests {
+        use super::*;
 
-    #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
-    #[cfg_attr(feature = "std", derive(scale_info::TypeInfo, ink::storage::traits::StorageLayout))]
-    pub struct Livro {
-        id: u32,
-        titulo: String,
-        autor: String,
-        data_publicacao: u64,
-        genero: Genero,
-    }
+        #[ink::test]
+        fn test_adicionar_livro() {
+            let mut manager = EmprestimoManager::new();
+            let result = manager.adicionar_livro("Rust Book".into(), "Steve Klabnik".into());
+            assert!(result.is_ok());
+        }
 
-    #[repr(u8)]
-    #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
-    #[cfg_attr(feature = "std", derive(scale_info::TypeInfo, ink::storage::traits::StorageLayout))]
-    pub enum StatusEmprestimo {
-        Ativo = 0,
-        Finalizado = 1,
-    }
+        #[ink::test]
+        fn test_emprestar_livro() {
+            let mut manager = EmprestimoManager::new();
+            let livro_id = manager.adicionar_livro("Rust Book".into(), "Steve Klabnik".into()).unwrap();
+            let result = manager.emprestar_livro(livro_id, "João".into(), "10-08-2024".into());
+            assert!(result.is_ok());
+        }
 
-    #[derive(Debug, PartialEq, Eq, scale::Encode, scale::Decode)]
-    #[cfg_attr(feature = "std", derive(scale_info::TypeInfo, ink::storage::traits::StorageLayout))]
-    pub struct Emprestimo {
-        id: u32,
-        id_livro: u32,
-        usuario: AccountId,
-        data_emprestimo: u64,
-        data_devolucao: Option<u64>,
-        status: StatusEmprestimo,
-    }
-
-    #[ink(event)]
-    pub struct EmprestimoRealizado {
-        #[ink(topic)]
-        id_emprestimo: u32,
-        #[ink(topic)]
-        id_livro: u32,
-        #[ink(topic)]
-        usuario: AccountId,
-        data_emprestimo: u64,
-    }
-
-    #[ink(event)]
-    pub struct EmprestimoFinalizado {
-        #[ink(topic)]
-        id_emprestimo: u32,
-        data_devolucao: u64,
+        #[ink::test]
+        fn test_devolver_livro() {
+            let mut manager = EmprestimoManager::new();
+            let livro_id = manager.adicionar_livro("Rust Book".into(), "Steve Klabnik".into()).unwrap();
+            let emprestimo_id = manager.emprestar_livro(livro_id, "João".into(), "10-08-2024".into()).unwrap();
+            let result = manager.devolver_livro(emprestimo_id, "15-08-2024".into());
+            assert!(result.is_ok());
+        }
     }
 }
