@@ -10,12 +10,22 @@ mod sistema_emprestimo {
         feature = "std",
         derive(scale_info::TypeInfo, ink::storage::traits::StorageLayout)
     )]
+pub enum Genero {
+    Ficcao,
+    NaoFiccao,
+    Romance,
+    Fantasia,
+    Ciencia,
+    Historia,
+    Outro(String),
+}
     pub struct Livro {
         pub id: u32,
         pub titulo: String,
         pub autor: String,
         pub disponivel: bool,
         pub publicado: String,
+pub genero: Genero,
     }
 
     #[derive(scale::Encode, scale::Decode, Clone, Debug, PartialEq)]
@@ -46,25 +56,33 @@ mod sistema_emprestimo {
         }
 
         #[ink(message)]
-        pub fn adicionar_livro(&mut self, titulo: String, autor: String, publicado: String) -> Result<u32, String> {
-            if titulo.is_empty() || autor.is_empty() || publicado.is_empty() {
-                return Err("Título, autor e data de publicação não podem estar vazios".into());
-            }
+pub fn adicionar_livro(
+    &mut self,
+    titulo: String,
+    autor: String,
+    publicado: String,
+    genero: Genero,
+) -> Result<u32, String> {
+    if titulo.is_empty() || autor.is_empty() || publicado.is_empty() {
+        return Err("Título, autor e data de publicação não podem estar vazios".into());
+    }
 
-            let id = self.next_livro_id;
-            let livro = Livro {
-                id,
-                titulo,
-                autor,
-                disponivel: true,
-                publicado,
-            };
+    let id = self.next_livro_id;
+    let livro = Livro {
+        id,
+        titulo,
+        autor,
+        disponivel: true,
+        publicado,
+        genero,
+    };
 
-            self.livros.insert(id, &livro);
-            self.next_livro_id = self.next_livro_id.checked_add(1).ok_or("ID overflow")?;
+    self.livros.insert(id, &livro);
+    self.next_livro_id = self.next_livro_id.checked_add(1).ok_or("ID overflow")?;
 
-            Ok(id)
-        }
+    Ok(id)
+}
+
 
         #[ink(message)]
         pub fn remover_livro(&mut self, livro_id: u32) -> Result<(), String> {
