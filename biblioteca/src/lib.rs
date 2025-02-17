@@ -15,6 +15,7 @@ mod sistema_emprestimo {
         pub titulo: String,
         pub autor: String,
         pub disponivel: bool,
+        pub publicado: String,
     }
 
     #[derive(scale::Encode, scale::Decode, Clone, Debug, PartialEq)]
@@ -44,11 +45,10 @@ mod sistema_emprestimo {
             Self::default()
         }
 
-        // ----- CRUD para Livros -----
         #[ink(message)]
-        pub fn adicionar_livro(&mut self, titulo: String, autor: String) -> Result<u32, String> {
-            if titulo.is_empty() || autor.is_empty() {
-                return Err("Título e autor não podem estar vazios".into());
+        pub fn adicionar_livro(&mut self, titulo: String, autor: String, publicado: String) -> Result<u32, String> {
+            if titulo.is_empty() || autor.is_empty() || publicado.is_empty() {
+                return Err("Título, autor e data de publicação não podem estar vazios".into());
             }
 
             let id = self.next_livro_id;
@@ -57,12 +57,57 @@ mod sistema_emprestimo {
                 titulo,
                 autor,
                 disponivel: true,
+                publicado,
             };
 
             self.livros.insert(id, &livro);
             self.next_livro_id = self.next_livro_id.checked_add(1).ok_or("ID overflow")?;
 
             Ok(id)
+        }
+
+        #[ink(message)]
+        pub fn remover_livro(&mut self, livro_id: u32) -> Result<(), String> {
+            if self.livros.get(livro_id).is_none() {
+                return Err("Livro não encontrado".into());
+            }
+            self.livros.remove(livro_id);
+            Ok(())
+        }
+
+        #[ink(message)]
+        pub fn editar_livro(&mut self, livro_id: u32, novo_titulo: String, novo_autor: String, nova_data: String) -> Result<(), String> {
+            let mut livro = self.livros.get(livro_id).ok_or("Livro não encontrado")?;
+            livro.titulo = novo_titulo;
+            livro.autor = novo_autor;
+            livro.publicado = nova_data;
+            self.livros.insert(livro_id, &livro);
+            Ok(())
+        }
+
+        #[ink(message)]
+        pub fn buscar_livro_por_titulo(&self, titulo: String) -> Vec<Livro> {
+            (0..self.next_livro_id)
+                .filter_map(|id| self.livros.get(id))
+                .filter(|livro| livro.titulo.contains(&titulo))
+                .collect()
+        }
+
+        #[ink(message)]
+        pub fn buscar_livro_por_autor(&self, autor: String) -> Vec<Livro> {
+            (0..self.next_livro_id)
+                .filter_map(|id| self.livros.get(id))
+                .filter(|livro| livro.autor == autor)
+                .collect()
+        }
+
+        #[ink(message)]
+        pub fn editar_emprestimo(&mut self, emprestimo_id: u32, novo_usuario: String, nova_data_emprestimo: String) -> Result<(), String> {
+            let mut emprestimo = self.emprestimos.get(emprestimo_id).ok_or("Empréstimo não encontrado")?;
+            emprestimo.usuario = novo_usuario;
+            emprestimo.data_emprestimo = nova_data_emprestimo;
+            self.emprestimos.insert(emprestimo_id, &emprestimo);
+            Ok(())
         }
 
         #[ink(message)]
@@ -103,26 +148,15 @@ mod sistema_emprestimo {
 
         #[ink(message)]
         pub fn listar_livros(&self) -> Vec<Livro> {
-            let mut lista = Vec::new();
-            for id in 0..self.next_livro_id {
-                if let Some(livro) = self.livros.get(id) {
-                    lista.push(livro);
-                }
-            }
-            lista
+            (0..self.next_livro_id).filter_map(|id| self.livros.get(id)).collect()
         }
 
         #[ink(message)]
         pub fn listar_emprestimos(&self) -> Vec<Emprestimo> {
-            let mut lista = Vec::new();
-            for id in 0..self.next_emprestimo_id {
-                if let Some(emprestimo) = self.emprestimos.get(id) {
-                    lista.push(emprestimo);
-                }
-            }
-            lista
+            (0..self.next_emprestimo_id).filter_map(|id| self.emprestimos.get(id)).collect()
         }
     }
+}
 
     #[cfg(test)]
     mod tests {
