@@ -1,0 +1,10 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/deps/libderive_more-17ca0edcf545c10a.so: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/syn_compat.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/utils.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/display.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/from.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/parsing.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/deps/derive_more-17ca0edcf545c10a.d: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/syn_compat.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/utils.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/display.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/from.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/parsing.rs
+
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/lib.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/syn_compat.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/utils.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/display.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/from.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/derive_more-0.99.19/src/parsing.rs:

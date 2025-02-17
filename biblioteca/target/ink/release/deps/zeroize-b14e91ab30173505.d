@@ -1,0 +1,8 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/deps/libzeroize-b14e91ab30173505.rmeta: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.8.1/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.8.1/src/x86.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/deps/libzeroize-b14e91ab30173505.rlib: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.8.1/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.8.1/src/x86.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/deps/zeroize-b14e91ab30173505.d: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.8.1/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.8.1/src/x86.rs
+
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.8.1/src/lib.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.8.1/src/x86.rs:

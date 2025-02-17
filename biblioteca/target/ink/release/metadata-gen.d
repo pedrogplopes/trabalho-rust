@@ -1,0 +1,1 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/metadata-gen: /mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/src/lib.rs /tmp/cargo-contract_8n9YtV/.ink/metadata_gen/main.rs

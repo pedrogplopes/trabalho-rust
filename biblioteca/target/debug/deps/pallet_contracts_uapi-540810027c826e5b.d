@@ -1,0 +1,8 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/debug/deps/libpallet_contracts_uapi-540810027c826e5b.rmeta: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pallet-contracts-uapi-9.0.0/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pallet-contracts-uapi-9.0.0/src/flags.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/debug/deps/libpallet_contracts_uapi-540810027c826e5b.rlib: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pallet-contracts-uapi-9.0.0/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pallet-contracts-uapi-9.0.0/src/flags.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/debug/deps/pallet_contracts_uapi-540810027c826e5b.d: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pallet-contracts-uapi-9.0.0/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pallet-contracts-uapi-9.0.0/src/flags.rs
+
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pallet-contracts-uapi-9.0.0/src/lib.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pallet-contracts-uapi-9.0.0/src/flags.rs:

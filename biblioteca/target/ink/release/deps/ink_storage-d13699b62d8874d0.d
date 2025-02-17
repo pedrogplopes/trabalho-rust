@@ -1,0 +1,10 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/deps/libink_storage-d13699b62d8874d0.rmeta: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/mod.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/mapping.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/vec.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/deps/libink_storage-d13699b62d8874d0.rlib: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/mod.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/mapping.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/vec.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/deps/ink_storage-d13699b62d8874d0.d: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lib.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/mod.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/mapping.rs /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/vec.rs
+
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lib.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/mod.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/mapping.rs:
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_storage-5.1.1/src/lazy/vec.rs:

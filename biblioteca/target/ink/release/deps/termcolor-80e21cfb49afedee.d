@@ -1,0 +1,7 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/deps/libtermcolor-80e21cfb49afedee.rmeta: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/termcolor-1.4.1/src/lib.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/deps/libtermcolor-80e21cfb49afedee.rlib: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/termcolor-1.4.1/src/lib.rs
+
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/release/deps/termcolor-80e21cfb49afedee.d: /home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/termcolor-1.4.1/src/lib.rs
+
+/home/pedrolopes/.cargo/registry/src/index.crates.io-6f17d22bba15001f/termcolor-1.4.1/src/lib.rs:

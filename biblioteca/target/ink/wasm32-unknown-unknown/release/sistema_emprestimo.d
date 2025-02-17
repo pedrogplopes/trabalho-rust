@@ -1,0 +1,1 @@
+/mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/target/ink/wasm32-unknown-unknown/release/sistema_emprestimo.wasm: /mnt/c/Users/inter_bg3ur0g/Downloads/ink/trabalho-rust/biblioteca/src/lib.rs
